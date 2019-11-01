@@ -1,15 +1,15 @@
-var db = require("../models");
+var db = require("../config");
+var Books = require("../models/BoozyBooks");
+var express = require("express");
+var router = express.Router();;
 
-module.exports = function(app) {
-  // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
-  });
+router.get('/', (req, res) => Books.findAll()
+.then(index => {
+  res.render('index', {index}
+  );
+})
+.catch(err => console.log(err)));
+ 
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
@@ -24,4 +24,4 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-};
+module.exports = router;
