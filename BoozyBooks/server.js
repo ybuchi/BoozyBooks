@@ -1,51 +1,30 @@
-require("dotenv").config();
-var express = require("express");
-var exphbs = require("express-handlebars");
-var db = require("./models");
-var sequelize = require("sequelize")
+var express = require('express');
+var exphbs = require('express-handlebars');
+var bodyParser = require('body-parser');
+var path = require('path');
+
+
+// DataBase
+var db = require('./config/database');
+// Test DB
+db.authenticate()
+.then(() => console.log('Database connected...'))
+.catch(err => console.log('Error: ' + err))
 
 var app = express();
-var PORT = process.env.PORT || 3000;
-
-// Middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(express.static("public"));
 
 // Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 
-// Routes
-// require("./routes/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
-require("./routes/apiRoutes.js")(app);
-require("./routes/htmlRoutes.js")(app);
+app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
+// books routes
+app.use('/chapterbooks', require('./routes/books'));
+// app.use('/sitewords', require('./routes/books'));
 
-var syncOptions = { force: false };
+var PORT = process.env.PORT || 5000;
 
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
-
-// Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
-});
-
-module.exports = app;
+app.listen(PORT, console.log(`Server started on port ${PORT}`));
