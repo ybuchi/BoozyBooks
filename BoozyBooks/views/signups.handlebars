@@ -1,17 +1,17 @@
+<section id="books" class="container">
+    <h1> SignUps</h1>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-<h1>TESTING</h1>
+    {{#each books}}
+        <div class="books">
+            <h3>bookTitle</h3>
+            <ul>
+                <li>{{readingStatus}}</li>
+                <li>{{readingLevel}}</li>            
+                <li>{{bookAuthor}}</li>            
+                <li>{{email}}</li>             
+            </ul>
+        </div>
+        {{else}}
+            <p>Not available</p>
+    {{/each}}
+</section>

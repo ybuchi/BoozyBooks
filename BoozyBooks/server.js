@@ -18,6 +18,13 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+// html routes
+require('./html-routes')(app);
+
+// api routes
+require('./api-routes')(app);
+
 // Landing page
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 // signups page
