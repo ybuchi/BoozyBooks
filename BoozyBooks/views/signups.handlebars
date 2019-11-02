@@ -40,16 +40,16 @@
                 </select>
                 </div>
                 <div class="form-group row">
-                <label for="name-input">Book Title</label>
-                <input class="form-control" id="last-name" type="text">
+                <label for="book-title">Book Title</label>
+                <input class="form-control" id="book-title" type="text">
               </div>
                 <div class="form-group row">
-                <label for="name-input">Book Author</label>
-                <input class="form-control" id="last-name" type="text">
+                <label for="book-author">Book Author</label>
+                <input class="form-control" id="book-author" type="text">
               </div>
                 <div class="form-group row">
-                    <label for="book-genre">Genre</label>
-                    <select class="form-control" id="book-genre">
+                    <label for="genre">Genre</label>
+                    <select class="form-control" id="genre">
                     <option>Realistic Fiction</option>
                     <option>Historical Fiction</option>
                     <option>Non-Fiction</option>
@@ -57,16 +57,16 @@
                     </select>
                 </div>
                 <div class="form-group row">
-                <label for="name-input">Reading Status</label>
-                <input class="form-control" id="last-name" type="text">
+                <label for="reading-status">Reading Status</label>
+                <input class="form-control" id="reading-status" type="text">
               </div>
               <div class="form-group row">
-                <label for="email-input">Email:</label>
-                <input class="form-control" id="email-input" type="email">
+                <label for="email">Email:</label>
+                <input class="form-control" id="email" type="email">
               </div>
               <div class="form-group row">
-                <label for="age-input">Age:</label>
-                <input class="form-control" id="age-input" type="number">
+                <label for="age">Age:</label>
+                <input class="form-control" id="age" type="number">
               </div>
               <button class="btn btn-primary" id="submit-userbookinfo" type="submit">Submit</button>
             </form>
@@ -88,19 +88,34 @@
     // Capture Button Click
     $("#submit-userbookinfo").on("click", function(event) {
       event.preventDefault();
-
+      
+    //Use jQuery to grab the values from the form
     var firstName = $("#first-name").val().trim();
     var lastName = $("#last-name").val().trim();
-      console.log(firstName);
-      console.log(lastName);
-    var readingLevel = $("reading-level");
+    var readingLevel = $("select#reading-level option:checked").text();
+    console.log("This is the first name: " + firstName);
+    console.log("This is the last name: " + lastName);
     console.log(readingLevel);
+
+    var bookTitle = $("#book-title").val().trim();
+    var bookAuthor = $("#book-author").val().trim();
+    console.log(bookTitle);
+    console.log(bookAuthor);
+
+    var genre = $("select#genre option:checked").text();
+    console.log(genre);
+
+    var readingStatus = $("#reading-status").val().trim();
+    var email = $("#email").val().trim();
+    var age = $("#age").val().trim();
+    console.log(readingStatus , email , age)
+
 
       // Capture User Inputs and store them into variables
       var newForm = {
           "first name" : firstName,
           "last name" : lastName,
-          "reading level" : $("reading-level").val().trim(),
+
       }
 
 
