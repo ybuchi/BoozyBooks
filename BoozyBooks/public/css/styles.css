@@ -140,6 +140,18 @@ a {
 }
 /* End Join section*/
 
+/* SIGNUP FORM */
+#signup-jumbotron{
+  background-image: url(../img/SignUpPic.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+
+#signup-title{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
 
 
 
