@@ -1,35 +1,26 @@
-// maybe require db
+
 
 module.exports = function(app){
-    // root route
-    require('./html-routes/home-route')
+    console.log('im here 1');
+// home root route
+require('./html-routes/home-route')
+(app)
 
-    //sign up
-    app.get('/signup', (req, res) => {
-        res.render('index', { layout: 'landing' })
-    });
+// sign route
+require('./html-routes/signup')
+(app)
 
-    // home with user
-    app.get('/dashboard', (req, res) => {
-        res.render('index', { layout: 'landing' })
-    });
+// home with user route
+require('./html-routes/userHome')
+(app)
 
-    //sign up
-    app.get('/signup', (req, res) => {
-        res.render('index', { layout: 'landing' })
-    });
+//blog route
+require('./html-routes/blog')
+(app)
 
-    // blog
-    app.get('/blog', (req, res) => {
-        res.render('index', { layout: 'landing' })
-    });
-
-    // meetups
-    app.get('/meetup', (req, res) => {
-        res.render('index', { layout: 'landing' })
-    });
-    
+//meetup route
+require('./html-routes/meetup')
+(app)
 
 
-
-}
+};
