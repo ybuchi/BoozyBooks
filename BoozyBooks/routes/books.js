@@ -6,70 +6,79 @@ var Book = require('../models/BoozyBooks');
 // Get Sign Up
 router.get('/', (req, res) => 
 Book.findAll()
-.then(signups => { 
-res.render('signups', {
-signups
-});
-})
-.catch(err => console.log(err)));
+    .then(signups => { 
+        res.render('signups', {
+            signups
+        });
+    })
+    .catch(err => console.log(err)));
 
 // Get Chapterbooks List
 router.get('/', (req, res) => 
 Book.findAll()
-.then(chapterbooks => { 
-res.render('chapterbooks', {
-    chapterbooks
-});
-})
-.catch(err => console.log(err)));
+    .then(chapterbooks => { 
+        // console.log(chapterbooks);
+        // res.sendStatus(200);
+
+        res.render('chapterbooks', {
+            chapterbooks
+    });
+ })
+    .catch(err => console.log(err)));
 
 // Get sitewords List
 router.get('/', (req, res) => 
 Book.findAll()
-.then(sitewords => { 
-res.render('sitewords', {
-sitewords
+    .then(sitewords => { 
+        res.render('sitewords', {
+            sitewords
 
 });
 })
-.catch(err => console.log(err)));
+    .catch(err => console.log(err)));
 
 
 
 
-// Add a Blog
+// Add a new book
 router.get('/add', (req, res) => {
 var data = {
-    title: "The Great Gatsby",
-    firstName: "Sinuhe",
-    lastName: "Montero",
-    author: "F. Scott Fitzgerald",
-    genre: "Fiction",
-    blog: 'I Love this book! I read this when I was in college. I know super late. I then saw the movie some years later but I certainly prefered reading the book.'
+    firstName: "joseph",
+    lastName: "henry",
+    email: "j.henry@gmail.com",
+    readingLevel: "CB",
+    bookTitle:  "the engine",
+    bookAuthor:  "veger sinuhe",
+    genre: "historical fiction",
+    readingStatus: "soon_to_complete"
 }
 
-let { title, firstName, lastName, author, genre, blog } = data;
+let { firstName, lastName, email, readingLevel, bookTitle, bookAuthor, genre, readingStatus} = data;
+
 
 // Insert INTO TABLE
 Book.create({
-    title,
-    firstName,
+    firstName, 
     lastName, 
-    author, 
+    email, 
+    readingLevel, 
+    bookTitle, 
+    bookAuthor, 
     genre, 
-    blog
+    readingStatus
+
 })
 .then(chapterbooks => res.redirect('/chapterbooks'))
 .catch(err => console.log(err));
 });
 
 
-// router.get('/', (req, res) => 
-// Book.findAll()
-// .then(sitewordsDB => { 
-//     console.log(sitewordsDB);
-// res.sendStatus(200);
-// })
-// .catch(err => console.log(err)));
+router.get('/', (req, res) => 
+Book.findAll()
+.then(sitewordsDB => { 
+    console.log(sitewordsDB);
+res.sendStatus(200);
+})
+.catch(err => console.log(err)));
 
 module.exports = router;
