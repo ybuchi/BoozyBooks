@@ -20,20 +20,10 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // html routes
-require('./html-routes')(app);
+require('./routes/html-routes')(app);
 
 // api routes
-require('./api-routes')(app);
-
-// Landing page
-app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
-// signups page
-app.get('/', (req, res) => res.render('signform', { layout: 'signups' }));
-
-// books routes
-app.use('/chapterbooks', require('./routes/books'));
-app.use('/sitewords', require('./routes/books'));
-app.use('/signups', require('./routes/books'));
+require('./routes/api-routes')(app);
 
 
 var PORT = process.env.PORT || 5000;

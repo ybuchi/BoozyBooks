@@ -1,4 +1,5 @@
-// maybe require db
+// require db
+
 
 module.exports = function(app){
     
@@ -16,7 +17,7 @@ module.exports = function(app){
         res.render('index', { layout: 'landing' })
     });
 
-    //sign up
+    //user books
     app.get('/api/user-book', (req, res) => {
         // render index with user data
         res.render('dashboard', { layout: 'landing' })

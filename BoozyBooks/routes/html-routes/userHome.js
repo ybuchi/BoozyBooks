@@ -1,7 +1,8 @@
 module.exports = function (app){
 
-// blog
-app.get('/blog', (req, res) => {
+// home with user
+app.get('/dashboard', (req, res) => {
     res.render('index', { layout: 'landing' })
 });
+
 };
