@@ -1,72 +1,87 @@
-var Sequelize = require('sequelize');
-var db = require('../config/database');
+var Sequelize = require("sequelize");
+var db = require("../config/database");
 
-var Signups = db.define('signups', {
-     title: {
-        type: Sequelize.STRING
-      },
-      firstName: {
-        type: Sequelize.STRING
-      },
-      lastName: {
-        type: Sequelize.STRING
-      },
-      email: {
-        type: Sequelize.STRING
-      },
-      author: {
-        type: Sequelize.STRING
-      },
-      genre: {
-        type: Sequelize.STRING
-      },
-      edlevel: {
-        type: Sequelize.STRING
-      }
-});
-
-var Chapterbooks = db.define('chapterbooks', {
-  title: {
-        type: Sequelize.STRING
-      },
-      firstName: {
-        type: Sequelize.STRING
-      },
-      lastName: {
-        type: Sequelize.STRING
-      },
-      author: {
-        type: Sequelize.STRING
-      },
-      genre: {
-        type: Sequelize.STRING
-      },
-      blog: {
-        type: Sequelize.STRING
-      }
-});
-
-var Sitewords = db.define('sitewords', {
-  title: {
-    type: Sequelize.STRING
-  },
+var Signups = db.define("signups", {
   firstName: {
     type: Sequelize.STRING
   },
-  LastName: {
+  lastName: {
     type: Sequelize.STRING
   },
-  author: {
+  email: {
+    type: Sequelize.STRING
+  },
+  readingLevel: {
+    type: Sequelize.STRING
+  },
+  bookTitle: {
+    type: Sequelize.STRING
+  },
+  bookAuthor: {
     type: Sequelize.STRING
   },
   genre: {
     type: Sequelize.STRING
   },
-  blog: {
+  readingStatus: {
     type: Sequelize.STRING
   }
 });
 
-module.exports = (Chapterbooks);
-module.exports = (Sitewords);
-module.exports = (Signups);
+var Chapterbooks = db.define("chapterbooks", {
+  firstName: {
+    type: Sequelize.STRING
+  },
+  lastName: {
+    type: Sequelize.STRING
+  },
+  email: {
+    type: Sequelize.STRING
+  },
+  readingLevel: {
+    type: Sequelize.STRING
+  },
+  bookTitle: {
+    type: Sequelize.STRING
+  },
+  bookAuthor: {
+    type: Sequelize.STRING
+  },
+  genre: {
+    type: Sequelize.STRING
+  },
+  readingStatus: {
+    type: Sequelize.STRING
+  }
+});
+
+var Sitewords = db.define("sitewords", {
+  firstName: {
+    type: Sequelize.STRING
+  },
+  lastName: {
+    type: Sequelize.STRING
+  },
+  email: {
+    type: Sequelize.STRING
+  },
+  readingLevel: {
+    type: Sequelize.STRING
+  },
+  bookTitle: {
+    type: Sequelize.STRING
+  },
+  bookAuthor: {
+    type: Sequelize.STRING
+  },
+  genre: {
+    type: Sequelize.STRING
+  },
+  readingStatus: {
+    type: Sequelize.STRING
+  }
+});
+
+module.exports = Chapterbooks;
+module.exports = Sitewords;
+module.exports = Signups;

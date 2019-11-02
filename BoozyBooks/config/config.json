@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Winter19!",
-    "database": "booziechapterbooksDB_db",
+    "password": "TESTPASSWORD",
+    "database": "booziebooksDB_db",
     "host": "localhost",
     "dialect": "mysql"
   },
