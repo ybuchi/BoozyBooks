@@ -18,12 +18,16 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
-
+// Landing page
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
+// signups page
+app.get('/', (req, res) => res.render('signform', { layout: 'signups' }));
 
 // books routes
 app.use('/chapterbooks', require('./routes/books'));
-// app.use('/sitewords', require('./routes/books'));
+app.use('/sitewords', require('./routes/books'));
+app.use('/signups', require('./routes/books'));
+
 
 var PORT = process.env.PORT || 5000;
 

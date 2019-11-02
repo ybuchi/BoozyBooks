@@ -2,6 +2,18 @@ DROP DATABASE IF EXISTS booziechapterbooksDB_db;
 CREATE DATABASE booziechapterbooksDB_db;
 USE booziechapterbooksDB_db;
 
+CREATE TABLE signups (
+  id INTEGER AUTO_INCREMENT NOT NULL,
+  title VARCHAR(30) NOT NULL,
+  firstName VARCHAR(100) NOT NULL,
+  lastName VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  author VARCHAR(30) NOT NULL,
+  genre VARCHAR(30) NOT NULL,
+  edlevel VARCHAR(30) NOT NULL,
+  PRIMARY KEY (id)
+);
+
 CREATE TABLE chapterbooks (
   id INTEGER AUTO_INCREMENT NOT NULL,
   title VARCHAR(30),
@@ -24,5 +36,9 @@ CREATE TABLE sitewords (
   PRIMARY KEY (id)
 );
 
+
+
 SELECT * FROM chapterbooks;
+SELECT * FROM signups;
+
 

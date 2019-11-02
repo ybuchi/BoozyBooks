@@ -70,7 +70,7 @@ a {
 
 /* Intro */
 .intro{
-  background-image: url("../img/KidsReading.jpg");
+  background-image: url("https://www.moneycrashers.com/wp-content/uploads/2018/05/children-reading-colorful-denim-outdoors-1068x713.jpg");
   background-repeat: none;
   background-size: cover;
   background-position: center;
@@ -132,6 +132,7 @@ a {
 .imgSize {
   width: 100%;
   max-width: 540px;
+  height: 400px;
  
 }
 .choices {

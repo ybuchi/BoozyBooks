@@ -3,6 +3,16 @@ var router = express.Router();
 var db = require('../config/database');
 var Book = require('../models/BoozyBooks');
 
+// Get Sign Up
+router.get('/', (req, res) => 
+Book.findAll()
+.then(signups => { 
+res.render('signups', {
+signups
+});
+})
+.catch(err => console.log(err)));
+
 // Get Chapterbooks List
 router.get('/', (req, res) => 
 Book.findAll()
@@ -12,6 +22,20 @@ res.render('chapterbooks', {
 });
 })
 .catch(err => console.log(err)));
+
+// Get sitewords List
+router.get('/', (req, res) => 
+Book.findAll()
+.then(sitewords => { 
+res.render('sitewords', {
+sitewords
+
+});
+})
+.catch(err => console.log(err)));
+
+
+
 
 // Add a Blog
 router.get('/add', (req, res) => {
