@@ -1,12 +1,14 @@
-
-
 module.exports = function(app){
     console.log('im here 1');
 // home root route
 require('./html-routes/home-route')
 (app)
 
-// sign route
+// signups route
+require('./html-routes/signups')
+(app)
+
+//where we add the signup
 require('./html-routes/signup')
 (app)
 

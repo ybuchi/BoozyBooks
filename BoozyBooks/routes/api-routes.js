@@ -1,5 +1,6 @@
 // require db
-var Database = require("../models/BoozyBooks")
+var Signups = require("../models/BoozyBooks")
+
 
 module.exports = function(app){
     
@@ -8,7 +9,7 @@ module.exports = function(app){
 
             // Take the request...
     var form = req.body;
-    console.log(form);
+    console.log("This is the form: " + form);
 
     // Create a routeName
 
