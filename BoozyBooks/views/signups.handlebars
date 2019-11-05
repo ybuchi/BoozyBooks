@@ -85,9 +85,10 @@
   <script>
     // ========================================= START CODING BELOW!!
 
-    // Capture Button Click
+    // CAPTURE BUTTON CLICK
     $("#submit-userbookinfo").on("click", function(event) {
-      event.preventDefault();
+    
+    event.preventDefault();
       
     //Use jQuery to grab the values from the form
     var firstName = $("#first-name").val().trim();
@@ -115,16 +116,44 @@
       var newForm = {
           "first name" : firstName,
           "last name" : lastName,
-
+          "reading level": readingLevel,
+          "book title": bookTitle,
+          "book author": bookAuthor,
+          "book genre" : genre,
+          "reading status" : readingStatus,
+          "email": email,
+          "age": age
       }
 
+  // send an AJAX POST-request with jQuery
+  $.post("/api/signup", newForm)
+    // on success, run this callback
+    .then(function(data) {
+      // log the data we found
+      console.log(data);
+      // tell the user we're adding a character with an alert window
+      alert("Adding your submission...");
 
+        // Clear the form when submitting
+        $("#first-name").val("");
+        $("#last-name").val("");
+        $("#reading-level").val("");
+        $("#book-title").val("");
+        $("#book-author").val("");
+        $("#genre").val("");
+        $("#reading-status").val("");
+        $("#email").val("");
+        $("#age").val("");
+    });
 
-      // Console log each of the user inputs to confirm we are receiving them correctly
 
 
       // Output all of the new information into the relevant HTML sections
     });
+
+    //Creat post request that will send the data back to the server
+
+
 
   </script>
 
