@@ -31,19 +31,78 @@
 
 <!-- container for API usage of Meet ups -->
 <div id="meetAPIs"></div>
-<div class="container">
+<section id="blogs" class="container">
 
-<p>
-    <!-- Meet up API Examples -->
-<div class="meetUps">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius cumque
-possimus, tempore commodi reiciendis ducimus laboriosam expedita at
-esse repudiandae sint dolores iure! Adipisci provident accusantium
-quae quos doloremque consectetur.
-</p>
+    {{#each blogs}}
+    
+       <!-- Meet up API Examples -->
+<div class="blog">
+  <div class="row">
+     <div class="col-md-6">
+        <h2>Title:</h2>
+        </div>
+    <div class="col-md-6">
+        <p>{{bookTitle}}</p>
+        </div>
+ </div>
+  <div class="row">
+     <div class="col-md-6">
+         <h3>Author:</h3>
+        </div>
+
+     <div class="col-md-6">
+         <p>{{bookAuthor}}</p>
+         </div>
+     </div>
+
+
+
+  <div class="row">
+     <div class="col-md-6">
+      <h3>Genre:</h3> 
+        </div>
+
+     <div class="col-md-6">
+            <p>{{genre}}</p> 
+        </div>
+        </div>
+
+
+  <div class="row">
+     <div class="col-md-6">
+    <h3>Reading Level:</h3> 
+        </div>
+    
+     <div class="col-md-6">
+        <p>{{readingLevel}}</p>
+        </div>
+        </div>
+
+
+
+  <div class="row">
+         <div class="col-md-12">
+<div class="innerBlog">
+     <h2>{{firstName}} {{lastName}}</h2>
+        </div>
+        </div>
+        </div>
+
+
+
+  <div class="row">
+     <div class="col-md-12">
+    <p>{{blogging}}</p>
+    
+</div>
 </div>
 
-</div>
+    {{else}}
+    <p>Blogging has paused</p>
+    {{/each}}
+</section>
+
+
 <br>
 <br>
 <div id="join"></div>
@@ -63,7 +122,7 @@ quae quos doloremque consectetur.
 <div class="card-body">
 <h5 class="card-title">Meet Up</h5>
 <p class="card-text">Want to set a Meet Up? Simply join and enjoy!</p>
-<a href="#" class="btn btn-primary">Join</a>
+<a href="/meetups" class="btn btn-primary">Get Started </a>
 </div>
 </div>
 </div>
@@ -74,7 +133,7 @@ quae quos doloremque consectetur.
 <div class="card-body">
 <h5 class="card-title">Blog</h5>
 <p class="card-text">Want to Blog? Simply join and enjoy!</p>
-<a href="#" class="btn btn-primary">Join</a>
+<a href="/blogs" class="btn btn-primary">Get Started</a>
 </div>
 </div>
 </div>
@@ -94,8 +153,8 @@ quae quos doloremque consectetur.
 <p>
 INSERT INTO chapterbooks (firstName, lastName, email, readingLevel, bookTitle, bookAuthor, genre, readingStatus)
 (Site-Word Button)
-<a href="#" class="btn btn-primary">Meetup</a>
-<a href="#" class="btn btn-primary">Blog</a>
+<a href="/meetups" class="btn btn-primary">Meetup</a>
+<a href="/blogs" class="btn btn-primary">Blog</a>
 </p>
 </div>
 
@@ -110,8 +169,8 @@ INSERT INTO chapterbooks (firstName, lastName, email, readingLevel, bookTitle, b
 <p>
 INSERT INTO chapterbooks (firstName, lastName, email, readingLevel, bookTitle, bookAuthor, genre, readingStatus)
 (Chapter-Book Button)
-<a href="#" class="btn btn-primary">Meetup</a>
-<a href="#" class="btn btn-primary">Blog</a>
+<a href="/meetups" class="btn btn-primary">Meetup</a>
+<a href="/blogs" class="btn btn-primary">Blog</a>
 </p>
 </div>
 </div>
@@ -125,8 +184,8 @@ INSERT INTO chapterbooks (firstName, lastName, email, readingLevel, bookTitle, b
 <p>
 INSERT INTO chapterbooks (firstName, lastName, email, readingLevel, bookTitle, bookAuthor, genre, readingStatus)
 (Advance-Readers Button)
-<a href="#" class="btn btn-primary">Meetup</a>
-<a href="#" class="btn btn-primary">Blog</a>
+<a href="/meetups" class="btn btn-primary">Meetup</a>
+<a href="/blogs" class="btn btn-primary">Blog</a>
 </p>
 </div>
 </div>

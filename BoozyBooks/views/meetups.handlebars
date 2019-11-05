@@ -1,0 +1,77 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>TESTINGGGG</h1>
+
+
+<section id="meetUps" class="container">
+
+    {{#each meetups}}
+    
+       <!-- Meet up API Examples -->
+<h1>Want to meet up with?</h1>
+<div class="row">
+<h2>{{firstName}} {{lastName}}</h2>
+</div>
+<div class="row">
+    <div class="col-md-6">
+    <h2>Book Title:<h2>
+        </div>
+
+    <div class="col-md-6">
+         <h2>{{bookTitle}}</h2>
+         </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+    <h2>Book Author:<h2>
+        </div>
+
+    <div class="col-md-6">
+         <h2>{{bookAuthor}}</h2>
+         </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+    <h2>Genre:<h2>
+        </div>
+
+    <div class="col-md-6">
+         <h2>{{genre}}</h2>
+         </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+    <h2>Reading Level:<h2>
+        </div>
+
+    <div class="col-md-6">
+         <h2>{{readingLevel}}</h2>
+         </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+    <h2>Reading Status:<h2>
+        </div>
+
+    <div class="col-md-6">
+         <h2>{{readingStatus}}</h2>
+         </div>
+</div>
+    
+
+
+    {{else}}
+    <p>Meet Up has paused</p>
+    {{/each}}
+</section>
+
