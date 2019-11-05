@@ -1,5 +1,5 @@
 // require db
-
+var Database = require("../models/BoozyBooks")
 
 module.exports = function(app){
     
