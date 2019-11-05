@@ -17,10 +17,9 @@ a {
   line-height: 2.5;
 }
 
-/* ///////////////////////// */
-
-
+/* /////////////////////////////////////////// */
 /* nav bar  */
+/* /////////////////////////////////////////// */
 .font-control {
   font-weight: bold;
 }
@@ -40,11 +39,14 @@ a {
 #main-logo-control {
   margin-left: 5%;
 }
-
+/* /////////////////////////////////////////// */
 /* end of nav bar */
 /* ///////////////////////////////////// */
 
+
+/* /////////////////////////////////////////// */
 /* Buttons */
+/* /////////////////////////////////////////// */
 .button-color {
   background-color: rgb(26, 159, 248);
   border: none;
@@ -64,11 +66,14 @@ a {
   .buttonContainer {
     text-align: center;
   }
-  
-/* End of Buttons */
 /* /////////////////////////////////////////// */
+  /* End of Buttons */
+/* /////////////////////////////////////////// */
+   
 
+/* /////////////////////////////////////////// */
 /* Intro */
+/* /////////////////////////////////////////// */
 .intro{
   background-image: url("https://www.moneycrashers.com/wp-content/uploads/2018/05/children-reading-colorful-denim-outdoors-1068x713.jpg");
   background-repeat: none;
@@ -102,25 +107,54 @@ a {
   text-align: center;
 
 }
-
-
+/* /////////////////////////////////////////// */
 /* End of Intro */
+/* /////////////////////////////////////////// */
 
+
+/* /////////////////////////////////////////// */
 /* Meet up API Examples */
+/* /////////////////////////////////////////// */
 .meetUps {
   background-color: whitesmoke;
   opacity: .8;
   font-size: 23px;
   width: 100%;
   margin-top: 10%;
-
   padding: 10px;
 }
+.blog {
+  background-color: whitesmoke;
+  opacity: .8;
+  font-size: 23px;
+  width: 100%;
+  margin-top: 10%;
+  padding: 10px;
+}
+.innerBlog {
+  background-color: whitesmoke;
+  opacity: .9;
+  font-size: 23px;
+  width: 100%;
+  padding: 15px;
+}
+.innermeetUp {
+  background-color: whitesmoke;
+  opacity: .9;
+  font-size: 23px;
+  width: 100%;
+  padding: 15px;
+}
+/* /////////////////////////////////////////// */
+/* End of meet up API */
+/* /////////////////////////////////////////// */
 
 
 
 
+/* /////////////////////////////////////////// */
 /* Join section */
+/* /////////////////////////////////////////// */
 .aboutUs {
  
   background-repeat: none;
@@ -138,7 +172,9 @@ a {
 .choices {
   padding-bottom: 20px;
 }
+/* /////////////////////////////////////////// */
 /* End Join section*/
+/* /////////////////////////////////////////// */
 
 /* SIGNUP FORM */
 #signup-jumbotron{
@@ -153,9 +189,14 @@ a {
 }
 
 
+/* /////////////////////////////////////////// */
 /* Footer */
+/* /////////////////////////////////////////// */
 footer {
   padding: 10px;
   text-align: center;
 }
+/* /////////////////////////////////////////// */
 /* End of Footer */
+/* /////////////////////////////////////////// */
+

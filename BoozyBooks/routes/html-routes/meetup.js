@@ -1,7 +1,58 @@
- 
- module.exports = function (app){
- // meetups
- app.get('/meetup', (req, res) => {
-    res.render('index', { layout: 'landing' })
+// module.exports = function (app){
+
+// // blog
+// app.get('/blogs', (req, res) => {
+//     res.render('index', { layout: 'landing' })
+// });
+// };
+
+
+var meetUP = require('../../models/BoozyBooks');
+
+
+module.exports = function (app) {
+
+// Get blog 
+app.get('/meetups', (req, res) => 
+meetUP.findAll()
+    .then(meetups => { 
+        res.render('meetups',  { layout: 'landing' 
+        });
+        meetups
+    })
+    .catch(err => console.log(err)));
+
+
+// Add a new meetup
+app.get('/addmeet', (req, res) => {
+var data = {
+   firstName: "Sinuhe",
+   lastName: "Montero",
+   email: "yoyoyo@yuurrrr.com",
+   readingLevel: "SW",
+   bookTitle: "Wow",
+   bookAuthor: "Sting",
+   genre: "realistic-fiction",
+   readingStatus: "soon_to_complete"
+   
+}
+
+let { firstName, lastName, email, readingLevel, bookTitle, bookAuthor, genre, readingStatus }  = data;
+
+
+// Insert INTO TABLE
+meetUP.create({
+    firstName, 
+    lastName, 
+    email, 
+    readingLevel,
+    bookTitle, 
+    bookAuthor, 
+    genre, 
+    readingStatus
+})
+.then(meetups => res.redirect('/meetups'))
+.catch(err => console.log(err));
 });
-};
+
+}
