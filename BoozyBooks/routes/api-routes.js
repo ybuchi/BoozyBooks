@@ -1,5 +1,6 @@
 // require db
-var Database = require("../models/BoozyBooks")
+var Blog = require("../models/Blog")
+var Signups = require("../models/Signups")
 
 module.exports = function(app){
     

@@ -1,4 +1,4 @@
-var getblogs = require('../../models/blogs');
+var getblogs = require('../../models/Blog');
 
 var getmeetups = require('../../models/meetups');
 
