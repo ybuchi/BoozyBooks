@@ -5,7 +5,9 @@ var db = require("../config/database");
 // MEET UPS
 // //////////////////////////////////
 
+
 var Meetups = db.define("meetups", {
+
   
     firstName: {
       type: Sequelize.STRING

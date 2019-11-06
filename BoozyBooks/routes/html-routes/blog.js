@@ -1,6 +1,4 @@
 
-
-
 var Blog = require('../../models/Blog');
 
 
