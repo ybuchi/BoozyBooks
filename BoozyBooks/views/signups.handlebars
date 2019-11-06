@@ -22,7 +22,7 @@
           <div class="card-body">
 
             <!-- Sign-up Form (note the various input "types")-->
-            <form role="form">
+            <form role="form" action="/signup" method="POST">
               <div class="form-group row">
                 <label for="name-input">First Name:</label>
                 <input class="form-control" id="first-name" type="text" placeholder="First Name">
@@ -77,84 +77,5 @@
     </div>
 
   </div>
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-
-  <!-- Script -->
-  <script>
-    // ========================================= START CODING BELOW!!
-
-    // CAPTURE BUTTON CLICK
-    $("#submit-userbookinfo").on("click", function(event) {
-    
-    event.preventDefault();
-      
-    //Use jQuery to grab the values from the form
-    var firstName = $("#first-name").val().trim();
-    var lastName = $("#last-name").val().trim();
-    var readingLevel = $("select#reading-level option:checked").text();
-    console.log("This is the first name: " + firstName);
-    console.log("This is the last name: " + lastName);
-    console.log(readingLevel);
-
-    var bookTitle = $("#book-title").val().trim();
-    var bookAuthor = $("#book-author").val().trim();
-    console.log(bookTitle);
-    console.log(bookAuthor);
-
-    var genre = $("select#genre option:checked").text();
-    console.log(genre);
-
-    var readingStatus = $("#reading-status").val().trim();
-    var email = $("#email").val().trim();
-    var age = $("#age").val().trim();
-    console.log(readingStatus , email , age)
-
-
-      // Capture User Inputs and store them into variables
-      var newForm = {
-          "first name" : firstName,
-          "last name" : lastName,
-          "reading level": readingLevel,
-          "book title": bookTitle,
-          "book author": bookAuthor,
-          "book genre" : genre,
-          "reading status" : readingStatus,
-          "email": email,
-          "age": age
-      }
-
-  // send an AJAX POST-request with jQuery
-  $.post("/api/signup", newForm)
-    // on success, run this callback
-    .then(function(data) {
-      // log the data we found
-      console.log(data);
-      // tell the user we're adding a character with an alert window
-      alert("Adding your submission...");
-
-        // Clear the form when submitting
-        $("#first-name").val("");
-        $("#last-name").val("");
-        $("#reading-level").val("");
-        $("#book-title").val("");
-        $("#book-author").val("");
-        $("#genre").val("");
-        $("#reading-status").val("");
-        $("#email").val("");
-        $("#age").val("");
-    });
-
-
-
-      // Output all of the new information into the relevant HTML sections
-    });
-
-    //Creat post request that will send the data back to the server
-
-
-
-  </script>
 
 

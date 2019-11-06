@@ -1,24 +1,13 @@
 var Sequelize = require("sequelize");
 var db = require("../config/database");
 
-// //////////////////////////////////
-// Chapterbooks
-// //////////////////////////////////
 
 
-var Chapterbooks = db.define("Chapterbooks", {
-  firstName: {
-    type: Sequelize.STRING
-  },
-  lastName: {
-    type: Sequelize.STRING
-  },
-  email: {
-    type: Sequelize.STRING
-  },
-  readingLevel: {
-    type: Sequelize.STRING
-  },
+// //////////////////////////////////
+// Blogs
+// //////////////////////////////////
+
+var Blogs = db.define("blogs", {
   bookTitle: {
     type: Sequelize.STRING
   },
@@ -28,16 +17,19 @@ var Chapterbooks = db.define("Chapterbooks", {
   genre: {
     type: Sequelize.STRING
   },
-  readingStatus: {
+  readingLevel: {
+    type: Sequelize.STRING
+  },
+  firstName: {
+    type: Sequelize.STRING
+  },
+  lastName: {
+    type: Sequelize.STRING
+  },
+  blogging: {
     type: Sequelize.STRING
   }
+  
 });
 
-
-
-module.exports = Chapterbooks;
-
-
-
-
-
+module.exports = Blogs;

@@ -1,13 +1,24 @@
 var Sequelize = require("sequelize");
 var db = require("../config/database");
 
-
-
 // //////////////////////////////////
-// Blogs
+// Sitewords
 // //////////////////////////////////
 
-var blogs = db.define("blogs", {
+
+var Sitewords = db.define("Sitewords", {
+    firstName: {
+      type: Sequelize.STRING
+    },
+    lastName: {
+      type: Sequelize.STRING
+    },
+    email: {
+      type: Sequelize.STRING
+    },
+    readingLevel: {
+      type: Sequelize.STRING
+    },
     bookTitle: {
       type: Sequelize.STRING
     },
@@ -17,21 +28,9 @@ var blogs = db.define("blogs", {
     genre: {
       type: Sequelize.STRING
     },
-    readingLevel: {
-      type: Sequelize.STRING
-    },
-    firstName: {
-      type: Sequelize.STRING
-    },
-    lastName: {
-      type: Sequelize.STRING
-    },
-    blogging: {
+    readingStatus: {
       type: Sequelize.STRING
     }
-    
   });
 
-
-
-module.exports = blogs;
+  module.exports = Sitewords;
