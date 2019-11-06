@@ -165,14 +165,18 @@ INSERT INTO chapterbooks (firstName, lastName, email, readingLevel, bookTitle, b
 
 <div class="container">
 <div class="meetUps">
+{{#each meetups}}
 
 <p>
-INSERT INTO chapterbooks (firstName, lastName, email, readingLevel, bookTitle, bookAuthor, genre, readingStatus)
+{{firstName}} {{lastName}} email, readingLevel, bookTitle, bookAuthor, genre, readingStatus)
 (Chapter-Book Button)
 <a href="/meetups" class="btn btn-primary">Meetup</a>
 <a href="/blogs" class="btn btn-primary">Blog</a>
 </p>
 </div>
+{{else}}
+    <p>Meet ups have paused</p>
+    {{/each}}
 </div>
 
 <br />
@@ -208,7 +212,7 @@ Sinuhe Montero
 </a>
 </div>
 <div class="col-md-3">
-<a target="_blank" href="https://github.com/Sinuhem23/">
+<a target="_blank" href="https://github.com/Koalescere?tab=repositories">
 Gavin Martin
 </a>
 </div>
@@ -227,8 +231,7 @@ Veger Pena
 
 </footer>
 
-</body>
-</html>
+
 
 
 

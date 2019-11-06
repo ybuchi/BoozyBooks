@@ -1,13 +1,7 @@
-// module.exports = function (app){
-
-// // blog
-// app.get('/blogs', (req, res) => {
-//     res.render('index', { layout: 'landing' })
-// });
-// };
 
 
-var Book = require('../../models/BoozyBooks');
+
+var Book = require('../../models/blogs');
 
 
 module.exports = function (app) {
@@ -16,6 +10,7 @@ module.exports = function (app) {
 app.get('/blogs', (req, res) => 
 Book.findAll()
     .then(blogs => { 
+        console.log(blogs)
         res.render('blogs',  { layout: 'landing', 
         blogs
 
@@ -27,7 +22,7 @@ Book.findAll()
 // Add a new blog
 app.get('/addblog', (req, res) => {
 var data = {
-    bookTitle:  "the engine",
+    bookTitle:  "GAVIN",
     bookAuthor:  "veger sinuhe",
     genre: "historical fiction",
     firstName: "joseph",
