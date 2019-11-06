@@ -6,7 +6,7 @@ var db = require("../config/database");
 // //////////////////////////////////
 
 
-var Chapterbooks = db.define("chapterbooks", {
+var Chapterbooks = db.define("Chapterbooks", {
   firstName: {
     type: Sequelize.STRING
   },

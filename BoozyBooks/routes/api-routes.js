@@ -1,5 +1,5 @@
 // require db
-var Blog = require("../models/Blogs")
+var Blog = require("../models/Blog")
 var Signups = require("../models/Signups")
 
 module.exports = function(app){
