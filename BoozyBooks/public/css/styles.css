@@ -294,7 +294,7 @@ margin-bottom: -100px;
 /* SIGNUP FORM */
 /* /////////////////////////////////////////// */
 #signup-jumbotron{
-  background-image: url('https://fullcircle.asu.edu/wp-content/uploads/2019/05/Essential-Reading-2019-MAC-0475w.jpg');
+  background-image: url('../img/SignUpPic.jpg');
   background-size: 100%;
   background-position: top;
   height:200px;
@@ -340,8 +340,17 @@ margin-bottom: -100px;
 /* End Join section*/
 /* /////////////////////////////////////////// */
 
+/* SIGNUP FORM */
+#signup-jumbotron{
+  background-image: url(../img/SignUpPic.jpg);
+  background-size: 100%;
+  background-position: center;
+}
 
-
+#signup-title{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
 
 
 /* /////////////////////////////////////////// */

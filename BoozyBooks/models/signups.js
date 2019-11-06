@@ -1,16 +1,10 @@
-
 var Sequelize = require("sequelize");
 var db = require("../config/database");
-
-
-
-
-// //////////////////////////////////
+/////////////////////////////////////
 // Sign up
 // //////////////////////////////////
 
-
-var Signups = db.define("signups", {
+var Signups = db.define("Signups", {
     firstName: {
       type: Sequelize.STRING
     },
@@ -34,13 +28,8 @@ var Signups = db.define("signups", {
     },
     readingStatus: {
       type: Sequelize.STRING
-    },
-    email: {
-      type:
-      Sequelize.STRING
     }
   });
-
 
 
 module.exports = Signups;

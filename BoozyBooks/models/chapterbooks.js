@@ -1,7 +1,6 @@
 var Sequelize = require("sequelize");
 var db = require("../config/database");
 
-
 // //////////////////////////////////
 // Chapterbooks
 // //////////////////////////////////
@@ -37,6 +36,7 @@ var Chapterbooks = db.define("chapterbooks", {
 
 
 module.exports = Chapterbooks;
+
 
 
 

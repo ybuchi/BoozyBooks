@@ -1,11 +1,8 @@
 var Sequelize = require("sequelize");
 var db = require("../config/database");
 
-
-
-
 // //////////////////////////////////
-// sitewords
+// Sitewords
 // //////////////////////////////////
 
 
@@ -36,6 +33,4 @@ var Sitewords = db.define("Sitewords", {
     }
   });
 
-
-
-module.exports = Sitewords;
+  module.exports = Sitewords;

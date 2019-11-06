@@ -17,17 +17,19 @@ var app = express();
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-
 //Body Parse
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// api routes
+require('./routes/api-routes')(app);
 // html routes
 require('./routes/html-routes')(app);
 
-// api routes
-require('./routes/api-routes')(app);
+
+
+
 
 
 var PORT = process.env.PORT || 5000;
