@@ -71,3 +71,6 @@ CREATE TABLE sitewords (
 SELECT * FROM chapterbooks;
 SELECT * FROM signups;
 SELECT * FROM sitewords;
+SELECT * FROM meetups;
+SELECT * FROM blogs;
+

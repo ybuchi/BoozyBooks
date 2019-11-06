@@ -1,13 +1,8 @@
-// module.exports = function (app){
-
-// // blog
-// app.get('/blogs', (req, res) => {
-//     res.render('index', { layout: 'landing' })
-// });
-// };
 
 
-var meetUP = require('../../models/BoozyBooks');
+
+
+var meetUP = require('../../models/meetups');
 
 
 module.exports = function (app) {
@@ -16,9 +11,11 @@ module.exports = function (app) {
 app.get('/meetups', (req, res) => 
 meetUP.findAll()
     .then(meetups => { 
-        res.render('meetups',  { layout: 'landing' 
-        });
+        console.log(meetups)
+        res.render('meetups',  { layout: 'landing', 
         meetups
+
+        });
     })
     .catch(err => console.log(err)));
 
@@ -26,11 +23,11 @@ meetUP.findAll()
 // Add a new meetup
 app.get('/addmeet', (req, res) => {
 var data = {
-   firstName: "Sinuhe",
-   lastName: "Montero",
+   firstName: "joey",
+   lastName: "jame",
    email: "yoyoyo@yuurrrr.com",
    readingLevel: "SW",
-   bookTitle: "Wow",
+   bookTitle: "Hello there",
    bookAuthor: "Sting",
    genre: "realistic-fiction",
    readingStatus: "soon_to_complete"
