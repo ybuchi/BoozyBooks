@@ -7,7 +7,7 @@ var db = require("../config/database");
 // Blogs
 // //////////////////////////////////
 
-var blogs = db.define("blogs", {
+var Blogs = db.define("blogs", {
     bookTitle: {
       type: Sequelize.STRING
     },
@@ -32,6 +32,8 @@ var blogs = db.define("blogs", {
     
   });
 
+  
 
 
-module.exports = blogs;
+
+module.exports = Blogs;

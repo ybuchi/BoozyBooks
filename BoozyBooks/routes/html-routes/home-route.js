@@ -1,30 +1,28 @@
-var getblogs = require('../../models/blogs');
+var getblogs = require('../../models/Blogs');
 
-var getmeetups = require('../../models/meetups');
+var getmeetups = require('../../models/Meetups');
 
 
 
 module.exports = function(app){
     // root aka home route
     app.get('/', (req, res) =>
-    getblogs.findAll()
+    getblogs.findAll({limit:1})
     .then(blogs =>
     {
-        console.log('im here');
-        res.render('index', { layout: 'landing',
-        blogs
+        getmeetups.findAll({limit:2})
+        .then(meetups => {
+            console.log('im here');
+            res.render('index', { layout: 'landing',
+            blogs, meetups
+        })
+
      });
-    //  .then(meetups => 
-    //     {
-    //         console.log("im here at meets");
-    //         res.render('index', {
-    //             layout: "landing",
-    //             meetups
-    //         });
-    //     })
-    //     console.log('im here now');
+   
     })
     .catch(err => console.log(err)));
 
 
 }
+
+

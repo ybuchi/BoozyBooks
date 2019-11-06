@@ -2,7 +2,7 @@
 
 
 
-var meetUP = require('../../models/meetups');
+var meetUP = require('../../models/Meetups');
 
 
 module.exports = function (app) {

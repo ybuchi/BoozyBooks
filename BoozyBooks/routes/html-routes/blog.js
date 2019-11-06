@@ -1,14 +1,14 @@
 
 
 
-var Book = require('../../models/blogs');
+var Blog = require('../../models/Blogs');
 
 
 module.exports = function (app) {
 
 // Get blog 
 app.get('/blogs', (req, res) => 
-Book.findAll()
+Blog.findAll()
     .then(blogs => { 
         console.log(blogs)
         res.render('blogs',  { layout: 'landing', 
@@ -36,7 +36,7 @@ let { bookTitle, bookAuthor, genre,firstName, lastName, readingLevel, blogging }
 
 
 // Insert INTO TABLE
-Book.create({
+Blog.create({
     bookTitle, 
     bookAuthor, 
     genre,

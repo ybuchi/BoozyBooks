@@ -9,7 +9,7 @@ var db = require("../config/database");
 // //////////////////////////////////
 
 
-var Sitewords = db.define("sitewords", {
+var Sitewords = db.define("Sitewords", {
     firstName: {
       type: Sequelize.STRING
     },

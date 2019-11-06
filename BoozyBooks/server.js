@@ -17,6 +17,10 @@ var app = express();
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+
+//Body Parse
+app.use(bodyParser.urlencoded({extended: false}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // html routes
