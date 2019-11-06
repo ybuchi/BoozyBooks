@@ -5,11 +5,11 @@ var Signups = require("../models/Signups")
 module.exports = function(app){
     
     //sign up
-    app.post("/api/signup",(req, res) => {
+    app.post("/signups", (req, res) => {
 
-            // Take the request...
+    // Take the request...
     var form = req.body;
-    console.log(form);
+    console.log(req.body);
 
     // Create a routeName
 
@@ -21,12 +21,12 @@ module.exports = function(app){
     Signups.create({
       firstName: form.firstName,
       lastName: form.lastName,
-      email: character.email,
-      readingLevel: character.readingLevel,
-      bookTitle: character.bookTitle,
-      bookAuthor: character.bookAuthor,
-      genre: character.genre,
-      readingStatus: character.readingStatus,
+      email: form.email,
+      readingLevel: form.readingLevel,
+      bookTitle: form.bookTitle,
+      bookAuthor: form.bookAuthor,
+      genre: form.genre,
+      readingStatus: form.readingStatus,
     });
 
     res.status(204).end();
