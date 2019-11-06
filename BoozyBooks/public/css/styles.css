@@ -11,6 +11,7 @@ html {
 }
 
 
+
 body {
   width: 100%;
 }
@@ -37,8 +38,12 @@ footer {
   font-weight: bold;
 }
 
+
 #logo-control {
   font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+
 }
 
 #nav-color {
@@ -188,6 +193,7 @@ footer {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+ 
 
 }
 
@@ -282,8 +288,9 @@ border-bottom: 2px solid rgb(187, 187, 187);
 }
 
 .homePGblogtext {
-margin-top: 66px;
-margin-bottom: -100px;
+padding: 10px;
+margin-top: 6%;
+margin-bottom: -10%;
 }
 /* /////////////////////////////////////////// */
 /* End of Blog API */
