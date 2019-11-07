@@ -11,6 +11,7 @@ html {
 }
 
 
+
 body {
   width: 100%;
 }
@@ -37,8 +38,12 @@ footer {
   font-weight: bold;
 }
 
+
 #logo-control {
   font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+
 }
 
 #nav-color {
@@ -87,6 +92,20 @@ footer {
   .continueBTN {
     color:rgb(0, 119, 255);
   }
+
+  .formBlogBtn {
+    width: 75%;
+    margin-top: 23px;
+    font-weight:bold;
+
+  }
+  .backToTop {
+    margin-left: 82%;
+    margin-top: 40px;
+    
+  }
+
+
   
   
 /* /////////////////////////////////////////// */
@@ -188,6 +207,7 @@ footer {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+ 
 
 }
 
@@ -282,8 +302,40 @@ border-bottom: 2px solid rgb(187, 187, 187);
 }
 
 .homePGblogtext {
-margin-top: 66px;
-margin-bottom: -100px;
+padding: 10px;
+margin-top: 6%;
+margin-bottom: -10%;
+}
+
+.form-wrap {
+  border: solid #e3f2fd;
+  width: 100%;
+  background-color: #e3f2fd;
+  opacity: .8;
+  padding: 30px;
+  box-shadow: 5px 10px 18px #888888;
+ 
+  
+}
+.marginTopBlogsPG {
+  margin-top: 6%;
+  text-align: center;
+ 
+}
+.input-group {
+  width: 100%;
+  margin-top: 10px;
+
+}
+.input-box {
+  border: solid rgb(212, 212, 212);
+  width:100%;
+}
+.infoText {
+  font-weight:bold;
+}
+.error {
+ border: solid black;
 }
 /* /////////////////////////////////////////// */
 /* End of Blog API */

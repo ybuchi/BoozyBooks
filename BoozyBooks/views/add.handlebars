@@ -1,13 +1,13 @@
-<section id="add" class="container marginTopBlogsPG">
+<section id="blogs" class="container marginTopBlogsPG">
    <div class="form-wrap">
       <h1>Add a Blog</h1>
 
       {{#each errors}}
 <div class="error">
    {{text}}
-</div> --}}
+</div>
       {{/each}}
-      <form action="/blogs" method="POST">
+      <form action="/add" method="POST">
          <div class="input-group">
             <lable class='infoText' for="firstName">First Name</lable>
             <input type="text" name='firstName' id='firstName' class="input-box" placeholder="What is your first name?"

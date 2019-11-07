@@ -36,5 +36,7 @@ var Meetups = db.define("meetups", {
   });
 
 
+
   module.exports = Meetups;
+
 
