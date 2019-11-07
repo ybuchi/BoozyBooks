@@ -5,7 +5,9 @@ var db = require("../config/database");
 // MEET UPS
 // //////////////////////////////////
 
+
 var Meetups = db.define("meetups", {
+
   
     firstName: {
       type: Sequelize.STRING
@@ -33,4 +35,8 @@ var Meetups = db.define("meetups", {
     }
   });
 
-module.exports = Meetups;
+
+
+  module.exports = Meetups;
+
+

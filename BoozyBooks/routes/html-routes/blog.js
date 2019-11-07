@@ -1,5 +1,6 @@
 var Blog = require("../../models/Blog");
 
+
 module.exports = function(app) {
   // Get blog
   app.get("/blogs", (req, res) =>
@@ -11,8 +12,10 @@ module.exports = function(app) {
       .catch(err => console.log(err))
   );
 
+
   // Display add blog form
   app.get("/blogs/", (req, res) => res.render("blogs"));
+
 
   // Add a new blog
   app.post("/blogs/", (req, res) => {
@@ -28,6 +31,7 @@ module.exports = function(app) {
     } = req.body;
 
     let errors = [];
+
 
     if (!firstName) {
       errors.push({ text: "Please add your first name" });
