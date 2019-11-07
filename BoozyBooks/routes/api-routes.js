@@ -33,15 +33,15 @@ module.exports = function(app){
   });
 
     // home with user
-    app.get('/dashboard', (req, res) => {
-        res.render('index', { layout: 'landing' })
-    });
+    // app.get('/dashboard', (req, res) => {
+    //     res.render('index', { layout: 'landing' })
+    // });
 
     //user books
-    app.get('/api/user-book', (req, res) => {
-        // render index with user data
-        res.render('dashboard', { layout: 'landing' })
-    });
+    // app.get('/api/user-book', (req, res) => {
+    //     // render index with user data
+    //     res.render('dashboard', { layout: 'landing' })
+    // });
 
     // // blog
     // app.get('/user-blog', (req, res) => {
@@ -52,6 +52,9 @@ module.exports = function(app){
     app.get('/meetup', (req, res) => {
         res.render('index', { layout: 'landing' })
     });
+    app.get('/api/blogs', (req, res) => {
+      res.render('blogs', { layout: 'landing' })
+  });
     
 
 

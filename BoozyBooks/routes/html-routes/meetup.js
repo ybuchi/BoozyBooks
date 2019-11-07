@@ -1,7 +1,3 @@
-
-
-
-
 var meetUP = require('../../models/Meetups');
 
 
@@ -21,35 +17,77 @@ meetUP.findAll()
 
 
 // Add a new meetup
-app.get('/addmeet', (req, res) => {
-var data = {
-   firstName: "joey",
-   lastName: "jame",
-   email: "yoyoyo@yuurrrr.com",
-   readingLevel: "SW",
-   bookTitle: "Hello there",
-   bookAuthor: "Sting",
-   genre: "realistic-fiction",
-   readingStatus: "soon_to_complete"
-   
-}
+app.get('/metups/', (req, res) => 
+res.render('meetups'));
 
-let { firstName, lastName, email, readingLevel, bookTitle, bookAuthor, genre, readingStatus }  = data;
-
-
-// Insert INTO TABLE
-meetUP.create({
+ // Add a new blog
+ app.post("/meetups/", (req, res) => {
+    // Pulling here
+let { 
     firstName, 
     lastName, 
     email, 
-    readingLevel,
+    readingLevel, 
     bookTitle, 
     bookAuthor, 
     genre, 
-    readingStatus
-})
-.then(meetups => res.redirect('/meetups'))
-.catch(err => console.log(err));
+    readingStatus }  = req.body;
+
+    let errors = [];
+
+    if (!firstName) {
+        errors.push({ text: "Please add your first name" });
+      }
+      if (!lastName) {
+        errors.push({ text: "Please add your first name" });
+      }
+      if (!email) {
+        errors.push({ text: "Please fill in email" });
+      }
+      if (!readingLevel) {
+        errors.push({ text: "Please fill in reading level" });
+      }
+      if (!bookTitle) {
+        errors.push({ text: "Please add the book's title" });
+      }
+      if (!bookAuthor) {
+        errors.push({ text: "Please add the book's author" });
+      }
+      if (!genre) {
+        errors.push({ text: "Please add the book's genre" });
+      }
+      if (!readingStatus) {
+        errors.push({ text: "Please fill in the reading status" });
+      }
+
+      if (errors.length > 0) {
+          res.render('meetups', {
+              errors,
+              firstName, 
+              lastName, 
+              email, 
+              readingLevel, 
+              bookTitle, 
+              bookAuthor, 
+              genre, 
+              readingStatus
+
+          });
+      }else {
+        // Insert INTO TABLE
+            meetUP.create({
+                firstName, 
+                lastName, 
+                email, 
+                readingLevel,
+                bookTitle, 
+                bookAuthor, 
+                genre, 
+                readingStatus
+            })
+            .then(meetups => res.redirect('/meetups'))
+            .catch(err => console.log(err));
+      }
 });
 
 }

@@ -1,11 +1,11 @@
-<section id="add" class="container marginTopBlogsPG">
+<section id="add" class="container marginTopPG">
    <div class="form-wrap">
       <h1>Add a Blog</h1>
 
       {{#each errors}}
 <div class="error">
    {{text}}
-</div> --}}
+</div> 
       {{/each}}
       <form action="/blogs" method="POST">
          <div class="input-group">
@@ -20,7 +20,7 @@
          </div>
          <div class="input-group">
             <lable class='infoText' for="bookTitle">Book Title</lable>
-            <input type="text" name='title' id='title' class="input-box" placeholder="What is the book's title?"
+            <input type="text" name='bookTitle' id='bookTitle' class="input-box" placeholder="What is the book's title?"
                maxlength="100" value={{bookTitle}}></input>
          </div>
          <div class="input-group">
