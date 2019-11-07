@@ -7,13 +7,16 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
+
 
 body {
   width: 100%;
 }
-a {
+a { 
   text-decoration: none; 
+  color : rgb(0, 0, 0); 
 }
 
 .list-group-item {
@@ -78,7 +81,14 @@ footer {
   }
   .meetBlogBtns {
     width: 100px;
+    padding:5px;;
   }
+
+  .continueBTN {
+    color:rgb(0, 119, 255);
+  }
+  
+  
 /* /////////////////////////////////////////// */
   /* End of Buttons */
 /* /////////////////////////////////////////// */
@@ -88,14 +98,15 @@ footer {
 /* Intro */
 /* /////////////////////////////////////////// */
 .intro{
-  background-image: url("https://www.moneycrashers.com/wp-content/uploads/2018/05/children-reading-colorful-denim-outdoors-1068x713.jpg");
+  background-image: url("https://i.pinimg.com/originals/66/e2/7c/66e27c2d4e57b720e742015a168638bd.jpg");
   background-repeat: none;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   width: 100%;
   margin-top: 5%;
   height:400px;
   max-height: 400px;
+  opacity: .8;
   
 }
 .welcome {
@@ -118,6 +129,31 @@ footer {
   text-align: center;
 
 }
+.locationIMG {
+  background-image: url("https://i.pinimg.com/originals/60/01/5e/60015e77304745e2d083c5584a71464e.jpg");
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin-top: 5%;
+  height:150px;
+  max-height: 150px;
+}
+.locationBorder {
+  background-color: whitesmoke;
+  opacity: .8;
+  text-align: center;
+  margin-top: 10%;
+
+}
+.moveDown {
+  color: white;
+  margin-top: 30px;
+  padding-top: 5%;
+}
+.locationText {
+  text-shadow: -1px 0 rgb(119, 117, 117), 0 1px rgb(114, 114, 114), 1px 0 rgb(93, 93, 93), 0 -1px rgb(65, 65, 65);
+}
 /* /////////////////////////////////////////// */
 /* End of Intro */
 /* /////////////////////////////////////////// */
@@ -134,6 +170,9 @@ footer {
   margin-top: 10%;
   padding: 10px;
 }
+.meetupsmargins {
+  margin-top: 66px;
+}
 #map {
   height: 600px;
   width: 100%;
@@ -145,10 +184,13 @@ footer {
   background-size: cover;
   background-position: center;
   width: 100%;
- 
- 
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 
 }
+
 .sizingmeets {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -157,9 +199,9 @@ footer {
 }
 
 .showBox {
-border: solid whitesmoke;
-margin-left: 5%;
+border: 2px solid whitesmoke;
 margin-top: 15px;
+border-radius: 10px;
 
 }
 .showBox:hover{
@@ -170,6 +212,18 @@ margin-top: 15px;
 .namePad {
   padding: 10px;
 }
+.innermeetUp {
+  background-color: whitesmoke;
+  opacity: .9;
+  font-size: 23px;
+  width: 100%;
+  padding: 15px;
+}
+/* /////////////////////////////////////////// */
+/* End of Meet up */
+/* /////////////////////////////////////////// */
+
+
 
 
 
@@ -183,26 +237,78 @@ margin-top: 15px;
   width: 100%;
   margin-top: 10%;
   padding: 10px;
+  
 
+}
+.blogCont{
+  margin-top: 12%;
+  border: 2px solid rgb(180, 180, 180);
+  border-radius: 10px;
+  background-color: whitesmoke;
+
+}
+.blogContHB{
+  margin-top: 5%;
+  border: 2px solid rgb(180, 180, 180);
+  border-radius: 10px;
+  background-color: whitesmoke;
+
+}
+.blogContHB:hover{
+  background-color: rgba(229, 246, 251, 0.753);
+  border:2px solid skyblue;
+  cursor: pointer;
+  opacity: .8;
+}
+.blogCont:hover{
+  background-color: rgba(229, 246, 251, 0.753);
+  border:2px solid skyblue;
+  cursor: pointer;
+  opacity: .8;
 }
 .innerBlog {
- 
+  
   font-size: 23px;
   width: 100%;
   padding: 15px;
 }
-.innermeetUp {
-  background-color: whitesmoke;
+.nameUnderLine {
+border-bottom: 2px solid rgb(187, 187, 187);
+}
+.bloggingBox {
+  border: 2px solid rgb(219, 219, 219);
+  padding: 10px;
+  background-color: white;
+}
+
+.homePGblogtext {
+margin-top: 66px;
+margin-bottom: -100px;
+}
+/* /////////////////////////////////////////// */
+/* End of Blog API */
+/* /////////////////////////////////////////// */
+
+
+/* /////////////////////////////////////////// */
+/* SIGNUP FORM */
+/* /////////////////////////////////////////// */
+#signup-jumbotron{
+  background-image: url('../img/SignUpPic.jpg');
+  background-size: 100%;
+  background-position: top;
+  height:200px;
   opacity: .9;
-  font-size: 23px;
-  width: 100%;
-  padding: 15px;
 }
-/* /////////////////////////////////////////// */
-/* End of meet up API */
-/* /////////////////////////////////////////// */
 
+#signup-title{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
 
+/* /////////////////////////////////////////// */
+/* END of SIGNUP FORM */
+/* /////////////////////////////////////////// */
 
 
 /* /////////////////////////////////////////// */
@@ -215,6 +321,11 @@ margin-top: 15px;
   background-position: center;
   width: 100%;
   max-width: 540px;
+}
+.aboutUs:hover {
+  background-color: rgba(229, 246, 251, 0.753);
+  display:2px solid rgb(220, 240, 248);
+  cursor: pointer;
 }
 .imgSize {
   width: 100%;

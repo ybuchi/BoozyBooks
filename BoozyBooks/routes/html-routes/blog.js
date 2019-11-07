@@ -1,4 +1,6 @@
+
 var Blog = require('../../models/Blog');
+
 
 
 module.exports = function (app) {

@@ -1,29 +1,28 @@
-
 <br />
 <br />
 
 <!-- container for Body -->
 <div class="container bodyContainer">
-        <div class="welcome">
-                <h1>Welcome!</h1>
-                </div>
-                
-<!-- Container for intro -->
-<div class="container intro">
-<div class="row col-lg-12">
-    <div class="introText">
-        <p class="introtext2">Parents need breaks too! 
-    <a href="#meetAPIs">Continue</h5></a>
-    to begin that deservered break.</p>
+    <div class="welcome">
+        <h1>Welcome!</h1>
     </div>
-    <div class="container buttonContainer">
-       
-        <div class="col-md-">
-            <a href="/signups" class="btn btn-warning signUpButton">Sign Up</a>
+
+    <!-- Container for intro -->
+    <div class="container intro">
+        <div class="row col-lg-12">
+            <div class="introText">
+                <p class="introtext2">Parents need breaks too!
+                    <a  href="#meetAPIs" class="continueBTN">Continue</h5></a>
+                    to begin that deservered break.</p>
+            </div>
+            <div class="container buttonContainer">
+
+                <div class="col-md-">
+                    <a href="/signups" class="btn btn-warning signUpButton">Sign Up</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <br />
@@ -32,74 +31,30 @@
 <!-- container for API usage of Meet ups -->
 <div id="meetAPIs"></div>
 <section id="blogs" class="container">
+    <h1 class="homePGblogtext">Lastest Blog</h1>
 
-    {{#each blogs}}
-    
-       <!-- Meet up API Examples -->
-<div class="blog">
-  <div class="row">
-     <div class="col-md-6">
-        <h2>Title:</h2>
-        </div>
-    <div class="col-md-6">
-        <p>{{bookTitle}}</p>
-        </div>
- </div>
-  <div class="row">
-     <div class="col-md-6">
-         <h3>Author:</h3>
-        </div>
+     {{#each blogs}}
+    <a href="/blogs">
 
-     <div class="col-md-6">
-         <p>{{bookAuthor}}</p>
-         </div>
-     </div>
-
-
-
-  <div class="row">
-     <div class="col-md-6">
-      <h3>Genre:</h3> 
+    <!-- Meet up API Examples -->
+    <div class="container blogCont">
+        <div class="innerBlog">
+            <h3 class="row nameUnderLine">{{firstName}} {{lastName}}</h3>
+            <p class="row">"{{bookTitle}}"</p>
+            <p class="row">By: {{bookAuthor}}</p>
+            <p class="row">{{readingLevel}} | {{genre}}</p>
+            <div class="container bloggingBox">
+                <p>{{blogging}}</p>
+            </div>
         </div>
 
-     <div class="col-md-6">
-            <p>{{genre}}</p> 
-        </div>
-        </div>
+    </div>
 
-
-  <div class="row">
-     <div class="col-md-6">
-    <h3>Reading Level:</h3> 
-        </div>
-    
-     <div class="col-md-6">
-        <p>{{readingLevel}}</p>
-        </div>
-        </div>
-
-
-
-  <div class="row">
-         <div class="col-md-12">
-<div class="innerBlog">
-     <h2>{{firstName}} {{lastName}}</h2>
-        </div>
-        </div>
-        </div>
-
-
-
-  <div class="row">
-     <div class="col-md-12">
-    <p>{{blogging}}</p>
-    
-</div>
-</div>
 
     {{else}}
     <p>Blogging has paused</p>
     {{/each}}
+    </a>
 </section>
 
 
@@ -112,88 +67,103 @@
 <br>
 <!-- container for setting up Meet ups and blogs -->
 <div class="container">
-        <h1 class="choices">What would you like to do?</h1>
-<div class="row">
-    
-<!-- Meet up Join -->
-<div class="container col-md-6 aboutUs">
-<div class="card">
-<img class='imgSize' src="https://drinksfeed.com/wp-content/blogs.dir/1/files/2019/05/Book_Club_Wines_Getty_1920x1280.jpg" class="card-img-top" alt="MeetUps">
-<div class="card-body">
-<h5 class="card-title">Meet Up</h5>
-<p class="card-text">Want to set a Meet Up? Simply join and enjoy!</p>
-<a href="/meetups" class="btn btn-primary">Get Started </a>
-</div>
-</div>
-</div>
-<!-- Blog Join -->
-<div class="container col-md-6 aboutUs">
-<div class="card">
-<img class='imgSize' src="https://www.telemediaonline.co.uk/wp-content/uploads/2019/03/Blogging-shutterstock_225278260.jpg" class="card-img-top" alt="Blogs">
-<div class="card-body">
-<h5 class="card-title">Blog</h5>
-<p class="card-text">Want to Blog? Simply join and enjoy!</p>
-<a href="/blogs" class="btn btn-primary">Get Started</a>
-</div>
-</div>
-</div>
+    <h1 class="choices">What would you like to do?</h1>
+    <div class="row">
 
-<!-- End of Row  -->
-</div>
-<!-- End of Container for Join -->
+        <!-- Meet up Join -->
+        <div class="container col-md-6 aboutUs">
+            <div class="card">
+                <a href="/meetups">
+                <img class='imgSize'
+                    src="https://drinksfeed.com/wp-content/blogs.dir/1/files/2019/05/Book_Club_Wines_Getty_1920x1280.jpg"
+                    class="card-img-top" alt="MeetUps"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Meet Up</h5>
+                    <p class="card-text">Want to set a Meet Up? Simply join and enjoy!</p>
+                    <a href="/meetups" class="btn btn-primary">Get Started </a>
+                </div>
+            </div>
+        </div>
+        <!-- Blog Join -->
+        <div class="container col-md-6 aboutUs">
+            <div class="card">
+                <a href="/blogs">
+                <img class='imgSize'
+                    src="https://www.telemediaonline.co.uk/wp-content/uploads/2019/03/Blogging-shutterstock_225278260.jpg"
+                    class="card-img-top" alt="Blogs"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Blog</h5>
+                    <p class="card-text">Want to Blog? Simply join and enjoy!</p>
+                    <a href="/blogs" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Row  -->
+    </div>
+    <!-- End of Container for Join -->
 </div>
 
 <br>
-<!-- container for API usage of blogs of ages 4-6 -->
 
-<div class="container">
 
-<div class="meetUps">
+<section id="meetUps" class="container meetupsmargins">
+    <h1>Checkout Some Events!</h1>
+    <br>
+    {{#each meetups}}
 
-<p>
-INSERT INTO chapterbooks (firstName, lastName, email, readingLevel, bookTitle, bookAuthor, genre, readingStatus)
-(Site-Word Button)
-<a href="/meetups" class="btn btn-primary">Meetup</a>
-<a href="/blogs" class="btn btn-primary">Blog</a>
-</p>
-</div>
+    <!-- Meet up API Examples -->
 
-</div>
+    <div class="container ">
+        <div class="row showBox">
+            <div class="col col-6">
+                <h3 class="row namePad">{{firstName}} {{lastName}}</h3>
 
-<br />
-<!-- container for API usage of blogs of ages 7-9 -->
 
-<div class="container">
-<div class="meetUps">
-{{#each meetups}}
+                <p>This event is for "{{genre}}" at the reading level of "{{readingLevel}}" with the status of
+                    "{{readingStatus}}"</p>
 
-<p>
-{{firstName}} {{lastName}} email, readingLevel, bookTitle, bookAuthor, genre, readingStatus)
-(Chapter-Book Button)
-<a href="/meetups" class="btn btn-primary">Meetup</a>
-<a href="/blogs" class="btn btn-primary">Blog</a>
-</p>
-</div>
-{{else}}
-    <p>Meet ups have paused</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="/meetups" class="btn btn-warning meetBlogBtns">Meetup</a>
+                    </div>
+                    <div class="col-md-8">
+                        <p>Joing this Session!</p>
+                    </div>
+                </div>
+                <div class="row joinandBlog">
+                    <div class="col-md-4">
+                        <a href="/blogs" class="btn btn-warning meetBlogBtns">Blog</a>
+                    </div>
+                    <div class="col-md-8 ">
+                        <p>Free!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 eventimg">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    {{else}}
+    <p>Meet Up has paused</p>
     {{/each}}
-</div>
+</section>
 
 <br />
-<!-- container for API usage of blogs of ages 10-12 -->
 
-<div class="container">
-<div class="meetUps">
+<div class="container locationIMG locationBorder">
+    
+    <div class="moveDown">
+        <h3 class="locationText"> Want to see our Locations and possibly blog?</h3>
+          <a href="/meetups" class="btn btn-warning">Click Here</a> 
+          </div>
+    </div>
 
-<p>
-INSERT INTO chapterbooks (firstName, lastName, email, readingLevel, bookTitle, bookAuthor, genre, readingStatus)
-(Advance-Readers Button)
-<a href="/meetups" class="btn btn-primary">Meetup</a>
-<a href="/blogs" class="btn btn-primary">Blog</a>
-</p>
-</div>
-</div>
-<!-- End of API usage for Blogs -->
+
 
 <!-- End of container for All -->
 </div>
@@ -201,44 +171,32 @@ INSERT INTO chapterbooks (firstName, lastName, email, readingLevel, bookTitle, b
 <br>
 <!-- Footer -->
 <footer class="bg-black small text-center">
-<div class="container">
-<div class="row">
-<p>Designed By:</p>
-</div>
-<div class="row">
-<div class="col-md-3">
-<a target="_blank" href="https://github.com/Sinuhem23/">
-Sinuhe Montero
-</a>
-</div>
-<div class="col-md-3">
-<a target="_blank" href="https://github.com/Koalescere?tab=repositories">
-Gavin Martin
-</a>
-</div>
-<div class="col-md-3">
-<a target="_blank" href="https://github.com/ybuchi">
-Yannik Buchi
-</a>
-</div>
-<div class="col-md-3">
-<a target="_blank" href="https://github.com/Sinuhem23/">
-Veger Pena
-</a>
-</div>
-</div>
-</div>
+    <div class="container">
+        <div class="row">
+            <p>Designed By:</p>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <a target="_blank" href="https://github.com/Sinuhem23/">
+                    Sinuhe Montero
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="https://github.com/Koalescere?tab=repositories">
+                    Gavin Martin
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="https://github.com/ybuchi">
+                    Yannik Buchi
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="https://github.com/vegerpena20">
+                    Veger Pena
+                </a>
+            </div>
+        </div>
+    </div>
 
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
