@@ -1,4 +1,4 @@
-<br />
+{{!-- <br />
 <br />
 
 <!-- container for Body -->
@@ -16,23 +16,17 @@
                     to begin that deservered break.</p>
             </div>
             <div class="container buttonContainer">
-
+                {{#each signups}}
                 <div class="col-md-">
-{{#each signups}}
-                <div class="col-md-">
-                    
-                    <a href="#join" class="btn btn-warning signUpButton">Hi 
-                    {{firstName}} {{lastName}}
+                    <a href="/" class="signUpButton">
+                    {{firstName}} 
                     </a>
-                    
                 </div>
                 {{else}}
         <div class="col-md-">
                     <a href="/signups" class="btn btn-warning signUpButton">Sign Up</a>
                 </div>
                 {{/each}}
-
-                </div>
             </div>
         </div>
     </div>
@@ -184,4 +178,4 @@
 <!-- End of container for All -->
 </div>
 <br>
-<br>
+<br> --}}

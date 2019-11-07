@@ -4,7 +4,7 @@ var db = require("../config/database");
 // Sign up
 // //////////////////////////////////
 
-var Signups = db.define("Signups", {
+var Signups = db.define("signups", {
     firstName: {
       type: Sequelize.STRING
     },
