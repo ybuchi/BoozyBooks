@@ -123,4 +123,64 @@
     {{else}}
     <p>Meet Up has paused</p>
     {{/each}}
+
+<section id="add" class="container marginTopPG">
+   <div class="form-wrap">
+      <h1>Add a Meetup</h1>
+
+{{#each errors}}
+<div class="error">
+   {{text}}
+</div> 
+      {{/each}}
+      <form action="/meetups" method="POST">
+         <div class="input-group">
+            <lable class='infoText' for="firstName">First Name</lable>
+            <input type="text" name='firstName' id='firstName' class="input-box" placeholder="What is your first name?"
+               maxlength="100" value={{firstName}}></input>
+         </div>
+        <div class="input-group">
+            <lable class='infoText' for="lastName">Last Name</lable>
+            <input type="text" name='lastName' id='lastName' class="input-box" placeholder="What is your last name?"
+               maxlength="100" value={{lastName}}></input>
+         </div>
+         <div class="input-group">
+            <lable class='infoText'for="email">Email</lable>
+            <input 
+            name='email' id='email' class="input-box" placeholder="Enter Email"
+               row='10'>{{email}}</input>
+         </div>
+         <div class="input-group">
+            <lable class='infoText' for="bookTitle">Book Title</lable>
+            <input type="text" name='bookTitle' id='bookTitle' class="input-box" placeholder="What is the book's title?"
+               maxlength="100" value={{bookTitle}}></input>
+         </div>
+         <div class="input-group">
+            <lable class='infoText' for="bookAuthor">Book Author</lable>
+            <input type="text" name='bookAuthor' id='bookAuthor' class="input-box" placeholder="Who is the author of the book?"
+               maxlength="100 value={{bookAuthor}}"></input>
+         </div>
+         <div class="input-group">
+            <lable class='infoText' for="genre">Genre</lable>
+            <input type="text" name='genre' id='genre' class="input-box" placeholder="What is the book's genre?"
+               maxlength="100" value={{genre}}></input>
+         </div>
+        <div class="input-group">
+            <lable class='infoText' for="readingLevel">Reading Level</lable>
+            <input type="text" name='readingLevel' id='readingLevel' class="input-box" placeholder="What is the book's reading level?"
+               maxlength="100" value={{readingLevel}}></input>
+         </div>
+         <div class="input-group">
+            <lable class='infoText'for="readingStatus">Reading Status</lable>
+            <input 
+            name='readingStatus' id='readingStatus' class="input-box" placeholder="How far along in the book are you?"
+               maxlength="100" value=>{{readingStatus}}</input>
+         </div>
+         <input type="submit" value="Add Meet Up" class="btn btn-warning formBlogBtn">
+      </form>
+   </div>
+</section>
+
+
+
 </section>

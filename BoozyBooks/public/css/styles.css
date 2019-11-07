@@ -36,6 +36,7 @@ footer {
 /* /////////////////////////////////////////// */
 .font-control {
   font-weight: bold;
+  padding-left: 5%;
 }
 
 
@@ -312,12 +313,12 @@ margin-bottom: -10%;
   width: 100%;
   background-color: #e3f2fd;
   opacity: .8;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 5px 10px 18px #888888;
  
   
 }
-.marginTopBlogsPG {
+.marginTopPG {
   margin-top: 6%;
   text-align: center;
  
