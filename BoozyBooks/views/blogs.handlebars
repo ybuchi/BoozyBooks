@@ -8,47 +8,73 @@
 </div> 
       {{/each}}
       <form action="/blogs" method="POST">
+      {{!-- First Name --}}
          <div class="input-group">
             <lable class='infoText' for="firstName">First Name</lable>
             <input type="text" name='firstName' id='firstName' class="input-box" placeholder="What is your first name?"
-               maxlength="100" value={{firstName}}></input>
+               maxlength="100" required="" value={{firstName}}></input>
          </div>
+      {{!-- Last Name --}}
         <div class="input-group">
             <lable class='infoText' for="lastName">Last Name</lable>
             <input type="text" name='lastName' id='lastName' class="input-box" placeholder="What is your last name?"
-               maxlength="100" value={{lastName}}></input>
+               maxlength="100" required="" value={{lastName}}></input>
          </div>
+      {{!-- Book Title --}}
          <div class="input-group">
             <lable class='infoText' for="bookTitle">Book Title</lable>
             <input type="text" name='bookTitle' id='bookTitle' class="input-box" placeholder="What is the book's title?"
-               maxlength="100" value={{bookTitle}}></input>
+               maxlength="100"  required=""value={{bookTitle}}></input>
          </div>
+      {{!-- Book Author --}}
          <div class="input-group">
             <lable class='infoText' for="bookAuthor">Book Author</lable>
             <input type="text" name='bookAuthor' id='bookAuthor' class="input-box" placeholder="Who is the author of the book?"
-               maxlength="100 value={{bookAuthor}}"></input>
+               maxlength="100" required="" value={{bookAuthor}}></input>
          </div>
+      {{!-- Genre --}}
          <div class="input-group">
             <lable class='infoText' for="genre">Genre</lable>
-            <input type="text" name='genre' id='genre' class="input-box" placeholder="What is the book's genre?"
-               maxlength="100" value={{genre}}></input>
+            <select 
+            name='genre'
+            id='genre' class="input-box" 
+            required=""
+            value={{genre}}><option value=""></option>
+                <option>Realistic Fiction</option>
+                <option>Historical Fiction</option>
+                <option>Non-Fiction</option>
+                <option>Traditional Literature</option></select>
          </div>
+      {{!-- Reading Level --}}
         <div class="input-group">
             <lable class='infoText' for="readingLevel">Reading Level</lable>
-            <input type="text" name='readingLevel' id='readingLevel' class="input-box" placeholder="What is the book's reading level?"
-               maxlength="100" value={{readingLevel}}></input>
+            <select
+            name='readingLevel' id='readingLevel' class="input-box" required=""
+             value={{readingLevel}}><option value=""></option>
+                <option value='SW'>SW - Site words (4 to 6 years old)</option>
+                <option value='CB'>CB - Chapter Books (7 to 9 years old)</option>
+                <option value='AR' disabled>AR - Advanced Reader (coming soon)</option>
+              </select>
          </div>
+      {{!-- Blog --}}
          <div class="input-group">
             <lable class='infoText'for="blogging">Blog</lable>
             <textarea 
             name='blogging' id='blogging' class="input-box" placeholder="Begin your Blog!"
+            required=""
                row='10'>{{genre}}</textarea>
          </div>
+         {{!-- Submit Btn --}}
          <input type="submit" value="Add Blog" class="btn btn-warning formBlogBtn">
       </form>
    </div>
 </section>
-
+<div id="blogExamples"></div>
+<div class="container blogIMG blogBorder">
+<h2 class="container moveDown pushdownblogPgTxt ">
+   Enjoy these blogs people are blogging about!
+</h2>
+</div>
 {{#each blogs}}
 
 <!-- Meet up API Examples -->
@@ -64,6 +90,9 @@
    </div>
 
 </div>
+
+
+
 
 {{else}}
 <p>Blogging has paused</p>

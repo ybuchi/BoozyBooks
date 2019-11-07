@@ -80,6 +80,8 @@ footer {
   .signUpButton {
     margin-top: 10%;
     width: 200px;
+    font-weight: bold;
+
    
   }
   .buttonContainer {
@@ -336,8 +338,34 @@ margin-bottom: -10%;
   font-weight:bold;
 }
 .error {
- border: solid black;
+ border: solid rgb(219, 63, 63);
+ margin-top: 10px;
+ background-color: white;
+
 }
+.pushdownblogPgTxt {
+  margin-top: 30px;
+  text-shadow: -1px 0 rgb(119, 117, 117), 0 1px rgb(114, 114, 114), 1px 0 rgb(93, 93, 93), 0 -1px rgb(65, 65, 65);
+
+}
+.blogIMG {
+  background-image: url("../img/BlogsBooks.jpg");
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin-top: 5%;
+  height:150px;
+  max-height: 150px;
+  color: white;
+}
+.blogBorder {
+  background-color: whitesmoke;
+  opacity: .8;
+  text-align: center;
+  margin-top: 10%;
+}
+
 /* /////////////////////////////////////////// */
 /* End of Blog API */
 /* /////////////////////////////////////////// */
@@ -357,6 +385,9 @@ margin-bottom: -10%;
 #signup-title{
   color: white;
   text-shadow: 2px 2px 4px #000000;
+}
+.newMember {
+  font-weight: bold;
 }
 
 /* /////////////////////////////////////////// */

@@ -1,4 +1,4 @@
-var path = require("path");
+// var path = require("path");
 
 
 module.exports = function(app){
@@ -12,8 +12,8 @@ require('./html-routes/signup')
 (app)
 
 // // home with user route
-// require('./html-routes/userHome')
-// (app)
+require('./html-routes/userHome')
+(app)
 
 //blog route
 require('./html-routes/blog')

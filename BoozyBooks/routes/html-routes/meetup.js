@@ -1,4 +1,4 @@
-var meetUP = require('../../models/Meetups');
+var meetUP = require('../../models/meetups');
 
 
 module.exports = function (app) {
@@ -17,7 +17,7 @@ meetUP.findAll()
 
 
 // Add a new meetup
-app.get('/metups/', (req, res) => 
+app.get('/meetups/', (req, res) => 
 res.render('meetups'));
 
  // Add a new blog
@@ -85,7 +85,7 @@ let {
                 genre, 
                 readingStatus
             })
-            .then(meetups => res.redirect('/meetups'))
+            .then(res.redirect('#AfterMeet'))
             .catch(err => console.log(err));
       }
 });

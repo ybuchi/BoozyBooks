@@ -1,6 +1,6 @@
 var getblogs = require('../../models/Blog');
-
-var getmeetups = require('../../models/Meetups');
+var getmeetups = require('../../models/meetups');
+var getsignups = require('../../models/signups');
 var Sequelize = require('sequelize');
 
 
@@ -12,22 +12,37 @@ module.exports = function(app){
     .then(blogs =>
     {
         getmeetups.findAll({order: Sequelize.literal('rand()'), limit:2})
-        .then(meetups => {
+        .then(meetups => 
+    {
+            
+        getsignups.findAll({limit:1})
+        .then(signups => 
+        
+            {
             console.log('im here');
             res.render('index', { layout: 'landing',
-            blogs, meetups
+            blogs, meetups, signups
         })
-
+        
      });
+     
    
     })
-    .catch(err => console.log(err)));
+    .catch(err => console.log(err));
+
+    
+    }
+    ))}
+
+ 
+
+
 
 
     
     //  // populate random on blogs route
     //  app.get('/blogs', (req, res) =>
-    //  getblogs.findAll({order: Sequelize.literal('rand()'), limit:4})
+    //  getblogs.findAll()
     //  .then(blogs =>
     //   {
     //       console.log('im here');
@@ -41,7 +56,7 @@ module.exports = function(app){
 
     //  // populate random meetups route
     //  app.get('/meetups', (req, res) =>
-    //  getblogs.findAll({order: Sequelize.literal('rand()'), limit:4})
+    //  getmeetups.findAll()
     //  .then(meetups =>
     //   {
     //       console.log('im here');
@@ -52,6 +67,5 @@ module.exports = function(app){
     //  .catch(err => console.log(err)));
  
 
-}
 
 

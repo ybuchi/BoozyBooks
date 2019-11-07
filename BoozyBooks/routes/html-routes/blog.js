@@ -74,7 +74,7 @@ module.exports = function(app) {
         readingLevel,
         blogging
       })
-        .then(blog => res.redirect("/blogs"))
+        .then(res.redirect("#blogExamples"))
         .catch(err => console.log(err));
     }
   });
