@@ -1,6 +1,6 @@
 
 -- Blogs--
-INSERT INTO blogs (firstName, lastName, readingLevel, bookTitle, bookAuthor, genre, blogging) VALUES("Mr", "Murdok", "SW", "There She Goes", "Angie E.", "Realistic Fiction", "HEY! I read this book entirely and from begin to end, I LOVED IT! I recommend this book to anyone!CHOW!"), ("Ms", "Mary", "SW", "Away With The Wind", "Carry L.", "Non-Fiction", "One of my absolute favorites!"), ("True", "Blue", "SW", "All The World", "H. Ford", "Historical Fiction", "I've learned so much from this book! I recommend it!");
+INSERT INTO blogs (firstName, lastName, readingLevel, bookTitle, bookAuthor, genre, blogging) VALUES("Mr.", "Murdok", "SW", "There She Goes", "Angie E.", "Realistic Fiction", "HEY! I read this book entirely and from begin to end, I LOVED IT! I recommend this book to anyone!CHOW!"), ("Ms.", "Mary", "SW", "Away With The Wind", "Carry L.", "Non-Fiction", "One of my absolute favorites!"), ("True", "Blue", "SW", "All The World", "H. Ford", "Historical Fiction", "I've learned so much from this book! I recommend it!");
 
 -- Meetups--
 INSERT INTO meetups (firstName, lastName, email, readingLevel, bookTitle, bookAuthor, genre, readingStatus) VALUES("Michael", "Low", "ItsCrazyOutHere@smiles.com","SW", "There She Goes", "Jane Main", "realistic fiction", "Just Started"),
