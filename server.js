@@ -23,9 +23,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // api routes
-require('./routes/api-routes')(app);
+require('./BoozyBooks/routes/api-routes')(app);
 // html routes
-require('./routes/html-routes')(app);
+require('./BoozyBooks/routes/html-routes')(app);
 
 
 
