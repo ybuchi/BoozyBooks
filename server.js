@@ -5,7 +5,7 @@ var path = require('path');
 
 
 // DataBase
-var db = require('./config/database');
+var db = require('./BoozyBooks/config/database');
 // Test DB
 db.authenticate()
 .then(() => console.log('Database connected...'))
