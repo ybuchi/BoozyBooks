@@ -5,7 +5,7 @@ var path = require('path');
 
 
 // DataBase
-var db = require('./config/database');
+var db = require('./BoozyBooks/config/database');
 // Test DB
 db.authenticate()
 .then(() => console.log('Database connected...'))
@@ -23,9 +23,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // api routes
-require('./routes/api-routes')(app);
+require('./BoozyBooks/routes/api-routes')(app);
 // html routes
-require('./routes/html-routes')(app);
+require('./BoozyBooks/routes/html-routes')(app);
 
 
 
