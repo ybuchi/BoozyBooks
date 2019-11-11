@@ -1,8 +1,8 @@
 var Sequelize = require('sequelize');
 
-module.exports = new Sequelize('booziebooksDB_db', "root", "gRisou1995?", {
-  host: 'localhost',
-  dialect: 'mysql',
+module.exports = new Sequelize("t9bbyey5wafqlt7z", "f6khqgt42ty33vr6", "bwtscvmaewqfhcsa", {
+  host: "lolyz0ok3stvj6f0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  dialect: "mysql",
   define: {
     timestamps: false
 },
