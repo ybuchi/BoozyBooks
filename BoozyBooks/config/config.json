@@ -1,16 +1,16 @@
 {
   "development": {
-    "username": "root",
-    "password": "gRisou1995?",
-    "database": "booziebooksDB_db",
-    "host": "localhost",
+    "username": "f6khqgt42ty33vr6",
+    "password": "bwtscvmaewqfhcsa?",
+    "database": "t9bbyey5wafqlt7z",
+    "host": "lolyz0ok3stvj6f0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "testdb",
-    "host": "localhost",
+    "username": "f6khqgt42ty33vr6",
+    "password": "bwtscvmaewqfhcsa",
+    "database": "t9bbyey5wafqlt7z",
+    "host": "lolyz0ok3stvj6f0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "logging": false
   },
